@@ -4,7 +4,6 @@ from PIL import Image, ImageDraw
 
 
 class DrawingApp:
-    # varieble= IntVar
 
     def __init__(self, root):
         self.root = root
@@ -28,12 +27,8 @@ class DrawingApp:
     def check(self, *args):
         """" обработка события выбора размера кисти"""
         self.brush_size_scale.set(self.variable.get())
-    # def display_selected(self):
-    #     choice = self.variable.get()
-    #     print('+', choice)
-    #     self.brush_size_scale.set(choice)
 
-
+    
     def setup_ui(self):
         control_frame = tk.Frame(self.root)
         control_frame.pack(fill=tk.X)
@@ -58,7 +53,7 @@ class DrawingApp:
         self.dropdown = tk.OptionMenu(
             self.root,
             self.variable,
-            *self.sizes#, self.display_selected()
+            *self.sizes
         )
         self.dropdown.pack(side=tk.LEFT)
         self.dropdown.pack(expand=True)
